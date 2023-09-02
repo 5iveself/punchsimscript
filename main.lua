@@ -8,7 +8,7 @@ function eggs(egg)
     		[1] = egg
 		}
 		game:GetService("ReplicatedStorage").Events.PlayerPressedKeyOnEgg:FireServer(unpack(args))
-		wait(10)
+		wait()
 	end
 end
 

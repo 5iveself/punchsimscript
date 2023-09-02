@@ -8,7 +8,7 @@ function eggs(Value)
     		[1] = Value
 		}
 		game:GetService("ReplicatedStorage").Events.PlayerPressedKeyOnEgg:FireServer(unpack(args))
-		wait(0)
+		wait(5)
 	end
 end
 
@@ -26,14 +26,14 @@ function autorebirth()
             [1] = true
         }
         game:GetService("ReplicatedStorage").Events.AscendEvent:FireServer(unpack(args))
-        wait(0)
+        wait(5)
     end
 end
 
 function autofarm()
     while _G.autotap == true do
         game:GetService("ReplicatedStorage").Events.DamageIncreaseOnClickEvent:FireServer();
-        wait(0);
+        wait(5);
     end
 end
 
@@ -43,7 +43,7 @@ local Window = OrionLib:MakeWindow({Name = "Punch Simulator", HidePremium = fals
 
 local Tab = Window:MakeTab({
 	Name = "Autofarm",
-	Icon = "rbxassetid://10586142459",
+	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
@@ -76,7 +76,7 @@ local Section = Tab:AddSection({
 
 Tab:AddDropdown({
 	Name = "Enter the egg stage number",
-	Default = "None",
+	Default = " ",
 	Options = {" ", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"},
 	Callback = function(Value)
 		eggs(Value)
@@ -87,7 +87,7 @@ Tab:AddLabel("Made by 5iveSelf")
 
 local Tab = Window:MakeTab({
 	Name = "Fun",
-	Icon = "rbxassetid://4700049612",
+	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 

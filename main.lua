@@ -1,6 +1,7 @@
 _G.autotap = true
 _G.autorebirth = true
 _G.autoopen = true
+_G.egg = 0
 
 function open(ValueEgg)
 	while _G.autoopen == true do
@@ -83,14 +84,25 @@ local Section = Tab:AddSection({
 
 Tab:AddDropdown({
 	Name = "Stage",
-	Default = "",
-	Options = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"},
+	Default = "0",
+	Options = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"},
 	Callback = function(ValueEgg)
-		open(ValueEgg)
+		_G.egg = ValueEgg
 	end    
 })
 
-Tab:AddLabel("Made by 5iveSelf")
+Tab:AddToggle({
+	Name = "Start Open",
+	Default = false,
+	Callback = function(bool)
+		_G.autoopen = bool
+        if bool then
+           open(_G.egg)
+        end
+    end
+})
+
+Tab:AddLabel("<u>Made by @Amkoine</u>")
 
 local Tab = Window:MakeTab({
     Name = "Fun",

@@ -43,7 +43,7 @@ local Window = OrionLib:MakeWindow({Name = "Punch Simulator", HidePremium = fals
 
 local Tab = Window:MakeTab({
 	Name = "Autofarm",
-	Icon = "rbxassetid://9913176040",
+	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
@@ -87,7 +87,7 @@ Tab:AddLabel("Made by 5iveSelf")
 
 local Tab = Window:MakeTab({
 	Name = "Fun",
-	Icon = "rbxassetid://9913141725",
+	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 

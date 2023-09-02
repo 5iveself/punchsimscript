@@ -1,5 +1,17 @@
 _G.autotap = true
 _G.autorebirth = true
+_G.autoopen = true
+
+function eggs(egg)
+	while _G.autoopen == true do
+		local args = {
+    		[1] = egg
+		}
+		game:GetService("ReplicatedStorage").Events.PlayerPressedKeyOnEgg:FireServer(unpack(args))
+		wait(10)
+	end
+end
+
 
 function speed(Value)
     local plyr = game.Players.LocalPlayer
@@ -58,6 +70,21 @@ Tab:AddToggle({
 	end
 })
 
+local Section = Tab:AddSection({
+	Name = "AutoOpen"
+})
+
+Tab:AddDropdown({
+	Name = "Enter the egg stage number",
+	Default = "None",
+	Options = {" ", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"},
+	Callback = function(egg)
+		eggs(egg)
+	end    
+})
+
+Tab:AddLabel("Made by 5iveSelf")
+
 local Tab = Window:MakeTab({
 	Name = "Fun",
 	Icon = "rbxassetid://4483345998",
@@ -77,16 +104,4 @@ Tab:AddSlider({
 	end    
 })
 
-Tab:AddSlider({
-	Name = "Height",
-	Min = 0,
-	Max = 10000,
-	Default = 25,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	ValueName = "Height",
-	Callback = function(Value)
-		sizeplayer(Value)
-	end    
-})
-
+OrionLib:Init()

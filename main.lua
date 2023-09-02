@@ -43,7 +43,7 @@ local Window = OrionLib:MakeWindow({Name = "Punch Simulator", HidePremium = fals
 
 local Tab = Window:MakeTab({
 	Name = "Autofarm",
-	Icon = "rbxassetid://9913141725",
+	Icon = "rbxassetid://9913176040",
 	PremiumOnly = false
 })
 

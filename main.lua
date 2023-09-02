@@ -76,10 +76,10 @@ local Section = Tab:AddSection({
 
 Tab:AddDropdown({
 	Name = "Enter the egg stage number",
-	Default = "None",
+	Default = " ",
 	Options = {" ", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"},
-	Callback = function(egg)
-		eggs(egg)
+	Callback = function(Value)
+		eggs(Value)
 	end    
 })
 

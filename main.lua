@@ -67,7 +67,7 @@ Tab:AddToggle({
         if bool then
             autorebirth()
         end
-	end
+   end
 })
 
 local Section = Tab:AddSection({
